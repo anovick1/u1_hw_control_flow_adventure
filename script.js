@@ -10,11 +10,14 @@ const noChoice = () => {
   travel()
 }
 
+// main adventure method. 2 starting paths, travel to NYC or LA
+// each destination has 3 questions after choosing a city
+// each final destination is marked in numbered as you go down
 const travel = () => {
   let city = prompt('Sweet, where do you wanna travel? NYC or LA')
 
   //
-  // NYC story line
+  // NYC story line, 3 final destinations from here
   //
   if (city === 'NYC') {
     let nyc1 = prompt(
@@ -59,7 +62,7 @@ const travel = () => {
   }
 
   //
-  // LA Story Line
+  // LA Story Line, 4 final destinations from here. I use integer input and a switch here
   //
   else if (city === 'LA') {
     let la1 = prompt(
@@ -125,4 +128,5 @@ const playGame = (play) => {
   }
 }
 
+// calls the game
 playGame(userPlay)
